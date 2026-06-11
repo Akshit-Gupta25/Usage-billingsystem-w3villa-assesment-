@@ -1,16 +1,35 @@
-# React + Vite
+STEPS TO RUN THE PROJECT :
+ 1. Clone Repository :
+       git clone https://github.com/Akshit-Gupta25/Usage-billingsystem-w3villa-assesment-.git
+ 2. Navigate to project directory :
+       cd <project name >
+ 3. Install Depependencies :
+        npm install
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ 4. Start development server : 
+        npm run dev
+ 5. Open in browser :
+        http://localhost:5173
 
-Currently, two official plugins are available:
+TECH STACK : 
+ React.js 
+ Js 
+ CSS
+ React Hook(useState)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+ Data Management
 
-## React Compiler
+This project uses React's useState hook for in-memory data management.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Resource data is stored in a state variable containing information such as available slots, price, and duration.
+Active bookings are stored in a separate state array.
+Revenue is tracked using another state variable.
+When a booking is created, the corresponding resource's available slots are reduced.
+When a booking is released, the bill is calculated, revenue is updated, and the slot is made available again.
 
-## Expanding the ESLint configuration
+Project Logic : 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+The system manages gaming resources such as PS5, PC, and VR with a limited number of slots. When a user books a resource, the available slot count decreases and the booking start time is recorded. The bill is calculated based on the usage duration, with additional charges applied for overtime usage. Once the resource is released, the final bill is generated, revenue is updated, and the slot becomes available for booking again.
+
+
